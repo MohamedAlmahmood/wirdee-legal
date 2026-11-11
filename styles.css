@@ -1,0 +1,137 @@
+:root {
+  color-scheme: light;
+  --cream: #f5f0e8;
+  --paper: #fffdf9;
+  --ink: #263328;
+  --muted: #6e766d;
+  --green: #27513c;
+  --green-soft: #e4efe7;
+  --line: #e6dfd4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(39, 81, 60, 0.08), transparent 34rem),
+    var(--cream);
+  color: var(--ink);
+  font:
+    17px/1.7 -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+main {
+  width: min(46rem, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.brand img {
+  border-radius: 1.35rem;
+  box-shadow: 0 0.8rem 2.2rem rgba(39, 81, 60, 0.16);
+}
+
+.eyebrow {
+  margin: 0 0 0.2rem;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 3.3rem);
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.015em;
+}
+
+a {
+  color: var(--green);
+  font-weight: 650;
+  text-underline-offset: 0.16em;
+}
+
+.lead {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.card {
+  margin-top: 1rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--paper);
+}
+
+ul {
+  padding-left: 1.3rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
+code {
+  padding: 0.08rem 0.3rem;
+  border-radius: 0.35rem;
+  background: var(--green-soft);
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 520px) {
+  main {
+    padding-top: 2rem;
+  }
+
+  .brand img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .lead {
+    font-size: 1.08rem;
+  }
+}
+
